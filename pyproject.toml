@@ -1,0 +1,18 @@
+[project]
+name = "Chong5084.github.io"
+version = "0.1.0"
+description = ""
+authors = [
+    {name = "Chong5084", email = "dmschd9647@gmail.com"},
+]
+dependencies = []
+requires-python = ">=3.8"
+readme = "README.md"
+license = {text = "MIT"}
+
+[build-system]
+requires = ["pdm-backend"]
+build-backend = "pdm.backend"
+
+[pypi]
+pypi-token = "pypi-AgEIcHlwaS5vcmcCJDIyMzYyNWZhLTFkNmUtNDc5MC1hNGEyLWI4ZWU5MDU3OTIzMgACKlszLCI3YWU1MjA5MS1mOTM3LTRjNDgtYTcyMi1hOTFhZjUyYjk2ZTQiXQAABiD3yu5_fsPkHSSLVB5cwt0LyfQ-ddrq8Il8hsgXMjw5fA0"
