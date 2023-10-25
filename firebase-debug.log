@@ -1,0 +1,53 @@
+[debug] [2023-10-23T08:50:14.631Z] ----------------------------------------------------------------------
+[debug] [2023-10-23T08:50:14.633Z] Command:       /usr/local/bin/firebase /home/user1/.cache/firebase/tools/lib/node_modules/firebase-tools/lib/bin/firebase deploy
+[debug] [2023-10-23T08:50:14.633Z] CLI Version:   12.7.0
+[debug] [2023-10-23T08:50:14.634Z] Platform:      linux
+[debug] [2023-10-23T08:50:14.634Z] Node Version:  v16.16.0
+[debug] [2023-10-23T08:50:14.634Z] Time:          Mon Oct 23 2023 17:50:14 GMT+0900 (Korean Standard Time)
+[debug] [2023-10-23T08:50:14.634Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-10-23T08:50:14.697Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-10-23T08:50:14.697Z] > authorizing via signed-in user (dmschd9647@gmail.com)
+[debug] [2023-10-23T08:50:14.698Z] [iam] checking project chong5084-80dfc for permissions ["firebase.projects.get","firebasedatabase.instances.update","firebasehosting.sites.update"]
+[debug] [2023-10-23T08:50:14.699Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/chong5084-80dfc:testIamPermissions [none]
+[debug] [2023-10-23T08:50:14.699Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/chong5084-80dfc:testIamPermissions x-goog-quota-user=projects/chong5084-80dfc
+[debug] [2023-10-23T08:50:14.700Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/chong5084-80dfc:testIamPermissions {"permissions":["firebase.projects.get","firebasedatabase.instances.update","firebasehosting.sites.update"]}
+[debug] [2023-10-23T08:50:15.724Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/chong5084-80dfc:testIamPermissions 200
+[debug] [2023-10-23T08:50:15.724Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/chong5084-80dfc:testIamPermissions {"permissions":["firebase.projects.get","firebasedatabase.instances.update","firebasehosting.sites.update"]}
+[debug] [2023-10-23T08:50:15.725Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/chong5084-80dfc [none]
+[debug] [2023-10-23T08:50:16.331Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/chong5084-80dfc 200
+[debug] [2023-10-23T08:50:16.332Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/chong5084-80dfc {"projectId":"chong5084-80dfc","projectNumber":"409052273835","displayName":"Chong5084","name":"projects/chong5084-80dfc","resources":{"hostingSite":"chong5084-80dfc","realtimeDatabaseInstance":"chong5084-80dfc-default-rtdb"},"state":"ACTIVE","etag":"1_51c38825-fa7a-4931-9a8f-e1909c74455c"}
+[debug] [2023-10-23T08:50:16.333Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/chong5084-80dfc [none]
+[debug] [2023-10-23T08:50:16.938Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/chong5084-80dfc 200
+[debug] [2023-10-23T08:50:16.938Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/chong5084-80dfc {"projectId":"chong5084-80dfc","projectNumber":"409052273835","displayName":"Chong5084","name":"projects/chong5084-80dfc","resources":{"hostingSite":"chong5084-80dfc","realtimeDatabaseInstance":"chong5084-80dfc-default-rtdb"},"state":"ACTIVE","etag":"1_51c38825-fa7a-4931-9a8f-e1909c74455c"}
+[info] 
+[info] === Deploying to 'chong5084-80dfc'...
+[info] 
+[info] i  deploying database, hosting 
+[info] i  database: checking rules syntax... 
+[debug] [2023-10-23T08:50:16.944Z] >>> [apiv2][query] GET https://firebasedatabase.googleapis.com/v1beta/projects/chong5084-80dfc/locations/-/instances/chong5084-80dfc-default-rtdb [none]
+[debug] [2023-10-23T08:50:18.238Z] <<< [apiv2][status] GET https://firebasedatabase.googleapis.com/v1beta/projects/chong5084-80dfc/locations/-/instances/chong5084-80dfc-default-rtdb 200
+[debug] [2023-10-23T08:50:18.239Z] <<< [apiv2][body] GET https://firebasedatabase.googleapis.com/v1beta/projects/chong5084-80dfc/locations/-/instances/chong5084-80dfc-default-rtdb {"name":"projects/409052273835/locations/asia-southeast1/instances/chong5084-80dfc-default-rtdb","project":"projects/409052273835","databaseUrl":"https://chong5084-80dfc-default-rtdb.asia-southeast1.firebasedatabase.app","type":"DEFAULT_DATABASE","state":"ACTIVE"}
+[debug] [2023-10-23T08:50:18.243Z] >>> [apiv2][query] PUT https://chong5084-80dfc-default-rtdb.asia-southeast1.firebasedatabase.app/.settings/rules.json dryRun=true
+[debug] [2023-10-23T08:50:18.243Z] >>> [apiv2][body] PUT https://chong5084-80dfc-default-rtdb.asia-southeast1.firebasedatabase.app/.settings/rules.json "{\n  /* Visit https://firebase.google.com/docs/database/security to learn more about security rules. */\n  \"rules\": {\n    \".read\": false,\n    \".write\": false\n  }\n}"
+[debug] [2023-10-23T08:50:18.498Z] <<< [apiv2][status] PUT https://chong5084-80dfc-default-rtdb.asia-southeast1.firebasedatabase.app/.settings/rules.json 200
+[debug] [2023-10-23T08:50:18.498Z] <<< [apiv2][body] PUT https://chong5084-80dfc-default-rtdb.asia-southeast1.firebasedatabase.app/.settings/rules.json {"status":"ok"}
+[info] ✔  database: rules syntax for database chong5084-80dfc-default-rtdb is valid 
+[debug] [2023-10-23T08:50:18.505Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/chong5084-80dfc/versions [none]
+[debug] [2023-10-23T08:50:18.506Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/chong5084-80dfc/versions {"status":"CREATED","labels":{"deployment-tool":"cli-firebase"}}
+[debug] [2023-10-23T08:50:19.426Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/chong5084-80dfc/versions 200
+[debug] [2023-10-23T08:50:19.426Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/chong5084-80dfc/versions {"name":"projects/409052273835/sites/chong5084-80dfc/versions/bb2dbac39807414a","status":"CREATED","config":{},"labels":{"deployment-tool":"cli-firebase"}}
+[info] i  hosting[chong5084-80dfc]: beginning deploy... 
+[debug] [2023-10-23T08:50:21.316Z] Error: EACCES: permission denied, scandir '/home/user1/docker'
+    at Object.readdirSync (node:fs:1405:3)
+    at Object.readdirSync (pkg/prelude/bootstrap.js:1306:35)
+    at GlobSync._readdir (/home/user1/.cache/firebase/tools/lib/node_modules/glob/sync.js:288:46)
+    at GlobSync._readdirInGlobStar (/home/user1/.cache/firebase/tools/lib/node_modules/glob/sync.js:245:17)
+    at GlobSync._readdir (/home/user1/.cache/firebase/tools/lib/node_modules/glob/sync.js:276:17)
+    at GlobSync._processReaddir (/home/user1/.cache/firebase/tools/lib/node_modules/glob/sync.js:137:22)
+    at GlobSync._process (/home/user1/.cache/firebase/tools/lib/node_modules/glob/sync.js:132:10)
+    at GlobSync._processGlobStar (/home/user1/.cache/firebase/tools/lib/node_modules/glob/sync.js:380:10)
+    at GlobSync._process (/home/user1/.cache/firebase/tools/lib/node_modules/glob/sync.js:130:10)
+    at new GlobSync (/home/user1/.cache/firebase/tools/lib/node_modules/glob/sync.js:45:10)
+[error] 
+[error] Error: An unexpected error has occurred.
